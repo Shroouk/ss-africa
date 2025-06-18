@@ -646,6 +646,11 @@ if (reversed == null) { reversed = false; }
 		if(this.totalFrames == 1) {
 			this.isSingleFrame = true;
 		}
+		createjs.Touch.enable(stage);
+		stage.mouseChildren = true;
+		
+		
+		
 		this.stop();
 		
 		var gameStage = this;
@@ -948,7 +953,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_1.png?1750254227525", id:"index_atlas_1"}
+		{src:"images/index_atlas_1.png?1750254594773", id:"index_atlas_1"}
 	],
 	preloads: []
 };
