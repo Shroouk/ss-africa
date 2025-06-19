@@ -799,6 +799,16 @@ if (reversed == null) { reversed = false; }
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		function ansClick(e) {
 			
 			indx = questions_arr.indexOf(e.target.parent)
@@ -862,6 +872,9 @@ if (reversed == null) { reversed = false; }
 				
 				
 			
+		
+			
+				
 				
 			function endLine(e){
 			   indx = questions_arr.indexOf(e.target.parent)
@@ -870,7 +883,7 @@ if (reversed == null) { reversed = false; }
 				if(hitRight[indx] == "done"){
 					//count++;
 					questions_arr[indx].removeAllEventListeners()
-		
+					anss_arr[indx].removeAllEventListeners()
 					console.log("Write_answer")
 		
 					background_arr[indx].gotoAndStop(1);
@@ -922,10 +935,163 @@ if (reversed == null) { reversed = false; }
 			
 			})
 		
+		
+		
+		anss_arr.forEach((item, index)=>{
+			
+					item.addEventListener('mousedown', ansClick2);
+					item.addEventListener("pressmove", draw2);
+					item.addEventListener("pressup", endLine2);
+			
+			})
+		
+		
 		background_arr.forEach((elm)=>{
 			elm.gotoAndStop(0)
 			})
 		
+			
+			}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		anss_arr.forEach((item, index)=>{
+			
+					item.addEventListener('mousedown', ansClick2);
+					item.addEventListener("pressmove", draw2);
+					item.addEventListener("pressup", endLine2);
+			
+			})
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		function ansClick2(e) {
+			
+			indx = anss_arr.indexOf(e.target.parent)
+			
+		gameStage.removeChild(connects[indx]);
+				connects[indx] = new createjs.Shape().set({
+						x: e.target.x,
+						y: e.target.y,
+						mouseEnabled: false,
+					});
+		
+				gameStage.addChild(connects[indx]);
+					
+					
+				}
+			
+		
+		
+		
+		
+			function draw2(e) {
+			
+				indx = anss_arr.indexOf(e.target.parent)
+				let item = questions_arr[indx].globalToLocal(e.stageX,e.stageY);
+		
+		        let item0 = questions_arr[0].globalToLocal(e.stageX,e.stageY);
+				let item1 = questions_arr[1].globalToLocal(e.stageX,e.stageY);
+				let item2 = questions_arr[2].globalToLocal(e.stageX,e.stageY);
+				let item3 = questions_arr[3].globalToLocal(e.stageX,e.stageY);
+				
+				
+		 if(questions_arr[indx].hitTest(item0.x,item0.y) || questions_arr[indx].hitTest(item1.x,item1.y) || questions_arr[indx].hitTest(item2.x,item2.y) || questions_arr[indx].hitTest(item3.x,item3.y)){
+				hitRight[indx] = "not";
+		 
+		 if(questions_arr[indx].hitTest(item.x,item.y)){
+				
+				hitRight[indx] = "done";
+				
+			 
+				}
+			
+			
+						} else{
+					hitRight[indx] = "";
+		
+						}
+				
+						
+					var p2 = stage.globalToLocal(stage.mouseX, stage.mouseY);
+		        	connects[indx].graphics.clear().setStrokeStyle(1.5, "round").s("#000000").mt(anss_arr[indx].x-23, anss_arr[indx].y-25).lt(p2.x-20 , p2.y-20 );
+				
+				
+					
+					// all hits to worng frame:
+					if(questions_arr[indx].hitTest(item0.x,item0.y)){
+						hits[indx] = "hit0"
+						}else if(questions_arr[indx].hitTest(item1.x,item1.y)){
+							hits[indx] = "hit1"
+							}else if(questions_arr[indx].hitTest(item2.x,item2.y)){
+								hits[indx] = "hit2"
+								}else if(questions_arr[indx].hitTest(item3.x,item3.y)){
+								hits[indx] = "hit3"
+								}
+					
+					}
+				
+				
+			
+				
+				
+			
+				
+			function endLine2(e){
+			   indx = anss_arr.indexOf(e.target.parent)
+				let wrong = hits[indx].slice(-1)
+				checkCount();
+				//console.log(hits2)
+				if(hitRight[indx] == "done"){
+					//count++;
+					anss_arr[indx].removeAllEventListeners()
+					questions_arr[indx].removeAllEventListeners()
+					console.log("Write_answer")
+		
+					background_arr[indx].gotoAndStop(1);
+					createjs.Sound.play("Write_answer")	
+				}else if(hitRight[indx] == ""){
+						gameStage.removeChild(connects[indx]);
+						}
+		
+					if(hitRight[indx] == "not"){
+					//questions_arr[indx].removeAllEventListeners()	
+						
+						console.log("hitsss: ", hits, wrong)
+		
+					background_arr[wrong].gotoAndStop(2);
+					createjs.Sound.play("Wrong_Answer")				
+						}
 			
 			}
 	}
@@ -944,7 +1110,7 @@ if (reversed == null) { reversed = false; }
 	// answers
 	this.q0 = new lib.Symbol28("synched",0);
 	this.q0.name = "q0";
-	this.q0.setTransform(687.55,171,1.4286,1.2245,0,0,0,24.6,24.5);
+	this.q0.setTransform(690.55,180,1.4286,1.2245,0,0,0,24.6,24.5);
 	this.q0.alpha = 0.0117;
 
 	this.q2 = new lib.Symbol28("synched",0);
@@ -1068,7 +1234,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_1.png?1750325638375", id:"index_atlas_1"}
+		{src:"images/index_atlas_1.png?1750333295298", id:"index_atlas_1"}
 	],
 	preloads: []
 };
