@@ -453,7 +453,7 @@ if (reversed == null) { reversed = false; }
 		
 		setTimeout(()=>{
 		gameStage.gotoAndStop(0)	
-			},1500)
+			},500)
 	}
 
 	// actions tween:
@@ -502,7 +502,7 @@ if (reversed == null) { reversed = false; }
 		
 		setTimeout(()=>{
 		gameStage.gotoAndStop(0)	
-			},1500)
+			},500)
 	}
 
 	// actions tween:
@@ -551,7 +551,7 @@ if (reversed == null) { reversed = false; }
 		
 		setTimeout(()=>{
 		gameStage.gotoAndStop(0)	
-			},1500)
+			},500)
 	}
 
 	// actions tween:
@@ -600,7 +600,7 @@ if (reversed == null) { reversed = false; }
 		
 		setTimeout(()=>{
 		gameStage.gotoAndStop(0)	
-			},1500)
+			},500)
 	}
 
 	// actions tween:
@@ -944,22 +944,22 @@ if (reversed == null) { reversed = false; }
 	// answers
 	this.q0 = new lib.Symbol28("synched",0);
 	this.q0.name = "q0";
-	this.q0.setTransform(705.55,192.5,1.2245,1,0,0,0,24.6,24.5);
+	this.q0.setTransform(687.55,171,1.4286,1.2245,0,0,0,24.6,24.5);
 	this.q0.alpha = 0.0117;
 
 	this.q2 = new lib.Symbol28("synched",0);
 	this.q2.name = "q2";
-	this.q2.setTransform(726.4,240.7,1.2245,1,0,0,0,24.4,24.5);
+	this.q2.setTransform(727.45,234.25,1.4286,1.2245,0,0,0,24.5,24.6);
 	this.q2.alpha = 0.0117;
 
 	this.q1 = new lib.Symbol28("synched",0);
 	this.q1.name = "q1";
-	this.q1.setTransform(750.85,324.15,1.2245,1,0,0,0,24.5,24.5);
+	this.q1.setTransform(749.95,324.65,1.4286,1.2245,0,0,0,24.6,24.5);
 	this.q1.alpha = 0.0117;
 
 	this.q3 = new lib.Symbol28("synched",0);
 	this.q3.name = "q3";
-	this.q3.setTransform(524.7,102.9,1.2245,1,0,0,0,24.6,24.5);
+	this.q3.setTransform(524.7,102.45,1.4286,1.2245,0,0,0,24.6,24.6);
 	this.q3.alpha = 0.0117;
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.q3},{t:this.q1},{t:this.q2},{t:this.q0}]}).wait(1));
@@ -975,29 +975,29 @@ if (reversed == null) { reversed = false; }
 	this.instance_2.setTransform(750.05,324.55,1,1,0,0,0,8.2,8.2);
 
 	this.instance_3 = new lib.Symbol12("synched",0);
-	this.instance_3.setTransform(702.05,200.85,1,1,0,0,0,8.2,8.1);
+	this.instance_3.setTransform(692.05,180.85,1,1,0,0,0,8.2,8.1);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
 
 	// Layer_11
 	this.ans3 = new lib.Symbol21copy("synched",0);
 	this.ans3.name = "ans3";
-	this.ans3.setTransform(357.05,421.45,0.329,0.6656,0,0,0,123.4,29.9);
+	this.ans3.setTransform(358.2,421.45,1.0279,0.6656,0,0,180,12.8,29.9);
 	this.ans3.alpha = 0.0195;
 
 	this.ans2 = new lib.Symbol21copy("synched",0);
 	this.ans2.name = "ans2";
-	this.ans2.setTransform(357.45,334.9,0.329,0.6656,0,0,0,123.4,29.9);
+	this.ans2.setTransform(356.55,335.1,1.0275,0.6656,0,0,0,226.5,31.7);
 	this.ans2.alpha = 0.0195;
 
 	this.ans1 = new lib.Symbol21copy("synched",0);
 	this.ans1.name = "ans1";
-	this.ans1.setTransform(357.45,243.55,0.329,0.6656,0,0,0,123.4,29.9);
+	this.ans1.setTransform(357.4,244,1.0275,0.6656,0,0,0,229.3,30.6);
 	this.ans1.alpha = 0.0195;
 
 	this.ans0 = new lib.Symbol21copy("synched",0);
 	this.ans0.name = "ans0";
-	this.ans0.setTransform(355.8,154.5,0.329,0.6656,0,0,0,126.9,29.9);
+	this.ans0.setTransform(354.15,154.5,1.0278,0.6656,0,0,0,227,29.9);
 	this.ans0.alpha = 0.0117;
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.ans0},{t:this.ans1},{t:this.ans2},{t:this.ans3}]}).wait(1));
@@ -1045,7 +1045,7 @@ if (reversed == null) { reversed = false; }
 
 	this.right0 = new lib.Symbol17("synched",0);
 	this.right0.name = "right0";
-	this.right0.setTransform(532.55,177.9,1,1,0,0,0,172.8,23.4);
+	this.right0.setTransform(522.7,167.8,0.9458,1,-3.2383,0,0,172.9,23.4);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.right0},{t:this.right1},{t:this.right3},{t:this.right2}]}).wait(1));
 
@@ -1068,7 +1068,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_1.png?1750320974067", id:"index_atlas_1"}
+		{src:"images/index_atlas_1.png?1750325638375", id:"index_atlas_1"}
 	],
 	preloads: []
 };
